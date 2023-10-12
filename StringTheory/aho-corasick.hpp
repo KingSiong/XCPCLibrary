@@ -11,7 +11,7 @@ struct AhoCorasick : Trie<X + 1, margin> {
     using TRIE = Trie<X + 1, margin>;
     using TRIE::next;
     using TRIE::st;
-    using TRIE::TRIE; // i learnt this from japanese, which can be deleted, i guess.
+    using TRIE::TRIE; // i copied this from japanese, which can be deleted, i guess.
     vector<int> cnt; // count all matched patterns when passing by i chars.
 
     void build() {
