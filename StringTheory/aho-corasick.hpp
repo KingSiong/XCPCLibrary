@@ -51,4 +51,6 @@ struct AhoCorasick : Trie<X + 1, margin> {
     }
 
     int count(int pos) { return cnt[pos]; }
+
+    int suffix_link(int pos) { return next(pos, X); }
 };
