@@ -57,5 +57,7 @@ struct Trie {
 
     int idx(int pos) { return pos < 0 ? -1 : st[pos].idx; }
 
+    bool is_endpoint(int pos) { return idx(pos) >= 0; }
+
     vector<int> idxs(int pos) { return pos < 0 ? vector<int>() : st[pos].idxs; }
 };
