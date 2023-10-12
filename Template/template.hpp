@@ -10,5 +10,8 @@
 #include <algorithm>
 #include <ctime>
 #include <cassert>
+#include <queue>
+#include <iterator>
+#include <array>
 
 using namespace std;
