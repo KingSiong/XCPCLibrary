@@ -1,7 +1,11 @@
 #pragma once
 #include "../Template/template.hpp"
 
-vector<int> prefix_function(string s) {
+/*
+verified by: https://codeforces.com/problemset/problem/126/B
+*/
+
+vector<int> prefix_fun(const string &s) {
     int n = (int)s.length();
     vector<int> pi(n);
     for (int i = 1; i < n; i++) {
