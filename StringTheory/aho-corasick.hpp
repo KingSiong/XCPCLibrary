@@ -1,11 +1,9 @@
 #pragma once
+
 #include "trie.hpp"
 
-/*
-next(i, X) <=> suffix-link(i) <=> fail-link(i)
-verified by: https://www.luogu.com.cn/problem/P5357
-*/
-
+// next(i, X) <=> suffix-link(i) <=> fail-link(i)
+// verified by: https://www.luogu.com.cn/problem/P5357
 template <size_t X = 26, char margin = 'a'>
 struct AhoCorasick : Trie<X + 1, margin> {
     using TRIE = Trie<X + 1, margin>;

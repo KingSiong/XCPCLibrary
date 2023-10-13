@@ -1,10 +1,8 @@
 #pragma once
+
 #include "../Template/template.hpp"
 
-/*
-verified by: https://www.luogu.com.cn/problem/P2580
-*/
-
+// verified by: https://www.luogu.com.cn/problem/P2580
 template <size_t X = 26, char margin = 'a'>
 struct Trie {
     struct Node {

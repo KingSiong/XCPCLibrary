@@ -1,10 +1,8 @@
 #pragma once
+
 #include "../Template/template.hpp"
 
-/*
-verified by: https://codeforces.com/problemset/problem/126/B
-*/
-
+// verified by: https://codeforces.com/problemset/problem/126/B
 vector<int> prefix_fun(const string &s) {
     int n = (int)s.length();
     vector<int> pi(n);

@@ -1,11 +1,9 @@
 #pragma once
+
 #include "../Template/template.hpp"
 
-/*
-verified by: https://codeforces.com/problemset/problem/126/B
-z[0] = 0
-*/
-
+// verified by: https://codeforces.com/problemset/problem/126/B
+// z[0] = 0
 vector<int> z_fun(const string &s) {
     int n = s.size();
     vector<int> z(n);

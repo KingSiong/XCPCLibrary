@@ -13,5 +13,6 @@
 #include <queue>
 #include <iterator>
 #include <array>
+#include <numeric>
 
 using namespace std;
