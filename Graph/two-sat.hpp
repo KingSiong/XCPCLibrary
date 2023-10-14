@@ -3,6 +3,14 @@
 #include "../Template/template.hpp"
 #include "./tarjan-scc.hpp"
 
+// add_clause(i, j) means i or j = true
+// set_val(i) means i = true
+// if_then(i, j) means i => j
+// at_most_one(nodes) means at most one variable in nodes can be true
+// NOTES: 
+// let fi = a0 or a1 or ... or ai
+// then: ai => fi, fi => ~a{i+1}, fi => f{i+1}
+// exactly_one(nodes) means exactly one variable in nodes is true
 // verified by: https://judge.yosupo.jp/submission/166271
 // at_most_one() was verified by: https://www.luogu.com.cn/record/129427111 
 // and https://pintia.cn/problem-sets/1705510247604809728/exam/problems/1705514248467492866?type=7&page=0
