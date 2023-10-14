@@ -7,6 +7,7 @@
 // DAG of SC graph   ... scc.dag (including multiedges)
 // new node of k     ... scc[k]
 // inv of scc[k] = i ... scc.belong(i)
+// verified by: https://judge.yosupo.jp/submission/166251
 template <typename G>
 struct SCC {
     const G &g;
