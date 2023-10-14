@@ -9,14 +9,12 @@
 // inv of scc[k] = i ... scc.belong(i)
 template <typename G>
 struct SCC {
-   private:
     const G &g;
     vector<vector<int>> rg;
     vector<int> comp, order;
     vector<char> used;
     vector<vector<int>> blng;
 
-   public:
     vector<vector<int>> dag;
     SCC(G &_g) : g(_g), used(g.size(), 0) { build(); }
 
@@ -24,7 +22,6 @@ struct SCC {
 
     vector<int> &belong(int i) { return blng[i]; }
 
-   private:
     void dfs(int idx) {
         if (used[idx]) return;
         used[idx] = true;
