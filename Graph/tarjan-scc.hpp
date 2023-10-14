@@ -15,7 +15,7 @@ struct SCC {
     vector<int> comp;
     vector<vector<int>> blng;
     vector<vector<int>> dag;
-    int order, siz;
+    int order, _size;
 
     SCC(G &_g) : g(_g) { build(); }
 
@@ -39,15 +39,15 @@ struct SCC {
                 auto v = stk.back();
                 stk.pop_back();
                 dfn[v] = g.size();
-                comp[v] = siz;
+                comp[v] = _size;
                 if (v == u) break;
             }
-            ++siz;
+            ++_size;
         }
     }
 
     void build() {
-        order = siz = 0;
+        order = _size = 0;
         dfn.resize(g.size(), -1);
         low.resize(g.size(), -1);
         stk.reserve(g.size());
@@ -64,8 +64,8 @@ struct SCC {
         stk.clear();
         stk.shrink_to_fit();
 
-        dag.resize(siz);
-        blng.resize(siz);
+        dag.resize(_size);
+        blng.resize(_size);
         for (int i = 0; i < (int)g.size(); i++) {
             blng[comp[i]].push_back(i);
             for (auto &v : g[i]) {
