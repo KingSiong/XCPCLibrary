@@ -4,14 +4,14 @@
 
 template <typename T>
 struct StringHash {
-    vector<T> hash, mod_pow;
+    vector<T> hash, base_pow;
     T mod;
     size_t base;
     size_t _size;
 
     StringHash(const string &s = "", T _mod = 998244353, size_t _base = 31)
         : hash(s.length() + 1, 0),
-          mod_pow(s.length() + 1, 0),
+          base_pow(s.length() + 1, 0),
           mod(_mod),
           base(_base),
           _size(s.length()) {
@@ -19,9 +19,9 @@ struct StringHash {
     }
 
     void build(const string &s) {
-        mod_pow[0] = 1;
+        base_pow[0] = 1;
         for (int i = 1; i <= (int)_size; i++) {
-            mod_pow[i] = mod_pow[i - 1] * base % mod;
+            base_pow[i] = base_pow[i - 1] * base % mod;
             hash[i] = (hash[i - 1] * base % mod + (int)s[i - 1]) % mod;
         }
     }
@@ -31,12 +31,12 @@ struct StringHash {
     T get_hash(int l, int r) const {
         if (l > r) return 0;
         assert(1 <= l && r <= _size);
-        return (hash[r] - hash[l - 1] * mod_pow[r - l + 1] % mod + mod) % mod;
+        return (hash[r] - hash[l - 1] * base_pow[r - l + 1] % mod + mod) % mod;
     }
 
     inline void add(const char &c) {
         int i = ++_size;
-        mod_pow.emplace_back(mod_pow[i - 1] * base % mod);
+        base_pow.emplace_back(base_pow[i - 1] * base % mod);
         hash.emplace_back((hash[i - 1] * base % mod + (int)c) % mod);
     }
     void add(const string &t) {
