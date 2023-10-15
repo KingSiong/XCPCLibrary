@@ -9,7 +9,7 @@ struct StringHash {
     size_t base;
     size_t _size;
 
-    StringHash(const string &s = "", T _mod = 99824353, size_t _base = 31)
+    StringHash(const string &s = "", T _mod = 998244353, size_t _base = 31)
         : hash(s.length() + 1, 0),
           mod_pow(s.length() + 1, 0),
           mod(_mod),
