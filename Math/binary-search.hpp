@@ -4,6 +4,8 @@
 
 // verified by: https://codeforces.com/contest/165/submission/228240241
 // f(x) is a non-decresing function
+// x: 0, 1, 2, ..., n - 1
+// then set l = -1, r = n
 int fun(int x) {
     // return f(x)
 }
