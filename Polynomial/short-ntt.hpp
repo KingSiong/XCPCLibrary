@@ -3,6 +3,7 @@
 #include "../Template/template.hpp"
 
 // verified by: https://contest.ucup.ac/submission/235652
+// verified by: https://www.luogu.com.cn/record/133033767
 int f_pow(int base, int b, int mod) {
     int res = 1;
     while (b) {

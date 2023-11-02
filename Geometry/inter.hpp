@@ -2,6 +2,7 @@
 
 #include "./geometry-template.hpp"
 #include "./on.hpp"
+#include "./line.hpp"
 
 vector<Point> seg_inter(Point &s1, Point &e1, Point &s2, Point &e2) {
     double oa = cross(e2 - s2, s1 - s2), ob = cross(e2 - s2, e1 - s2);
