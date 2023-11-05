@@ -3,6 +3,7 @@
 #include "../Template/template.hpp"
 
 // verified by: https://www.luogu.com.cn/record/133457030
+// verified by: https://contest.ucup.ac/submission/240112
 struct Query {
     int l, r, idx;
     Query(int _l = 0, int _r = 0, int _idx = 0) : l(_l), r(_r), idx(_idx) {}
