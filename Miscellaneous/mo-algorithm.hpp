@@ -39,7 +39,11 @@ void solve() {
     }
     sort(begin(q), end(q), [&](const auto &A, const auto &B) -> bool {
         if (A.l / block != B.l / block) return A.l < B.l;
-        return A.r < B.r;
+        if (A.l / block & 1) {
+            return A.r < B.r;
+        } else {
+            return A.r > B.r;
+        }
     });
     vector<int> up(m, 0), len(m, 0);
     for (int i = 0, l = 1, r = 0; i < m; i++) {
